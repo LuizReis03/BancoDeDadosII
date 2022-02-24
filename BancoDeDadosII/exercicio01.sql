@@ -64,3 +64,59 @@ if @TOTAL > 5
 		PRINT ('Desconto de 5% =  ' + CONVERT(CHAR(10), @PORCENTAGEM))
 		PRINT ('O valor a ser pago é: ' + CONVERT(CHAR(10), @DESCONTO))
 	END
+	
+	/*EXERCÍCIO 01 - WHILE ATÉ 62*/
+/*
+DECLARE @CONTADOR INT
+SET @CONTADOR = 0
+
+WHILE (@CONTADOR < 100)
+	BEGIN
+	SET @CONTADOR += 1
+	IF @CONTADOR = 62
+		BREAK;
+END
+
+PRINT('O resultado do While é: '+ CONVERT(CHAR(10), @CONTADOR))
+*/
+
+/*EXERCÍCIO 02 - 1 ATÉ 100 NÚMEROS PARES E IMPARES*/
+/*
+DECLARE @CONTADOR INT
+SET @CONTADOR = 0
+
+WHILE (@CONTADOR < 100)
+	BEGIN
+	SET @CONTADOR += 1
+	IF @CONTADOR % 2 = 0
+		PRINT('Os números:' +  CONVERT(CHAR(10), @CONTADOR) + 'É par')
+	
+	ELSE
+		PRINT('Os números:' +  CONVERT(CHAR(10), @CONTADOR) + 'É impar')
+END
+*/
+
+/*EXERCÍCIO 03 - 1 ATÉ 100 NÚMEROS PARES E IMPARES*/
+/*
+DECLARE @IDADE INT
+SET @IDADE = 0
+
+WHILE (@IDADE < 100)
+	BEGIN
+	SET @IDADE += 1
+	IF @IDADE % 2 = 0
+		PRINT('Os números:' +  CONVERT(CHAR(10), @IDADE) + 'É par')
+	
+	ELSE
+		PRINT('Os números:' +  CONVERT(CHAR(10), @IDADE) + 'É impar')
+END
+*/
+
+/*EXERCICIO 04 - Verificar se o aluno Mario está na tabela e calcular aumento na
+mensalidade de 10% e apresentar como jovem se idade menor que 60 senão idoso*/
+update Aluno 
+SET Mensalidade = Mensalidade + (Mensalidade * 0.10)
+where aluno.NomeAluno = 'Mario da Silva'
+
+SELECT * from Aluno
+
